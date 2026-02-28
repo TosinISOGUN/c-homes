@@ -39,15 +39,15 @@ const Listings = () => {
       {/* Page Header */}
       <div className="bg-primary text-primary-foreground py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="section-heading text-primary-foreground mb-4">All Apartments</h1>
-          <p className="text-primary-foreground/70 max-w-lg mx-auto">
+          <h1 className="section-heading text-primary-foreground mb-4 animate-fade-in">All Apartments</h1>
+          <p className="text-primary-foreground/70 max-w-lg mx-auto animate-fade-in-up">
             Browse all available apartments in Ibadan. Use the filters to narrow down by location.
           </p>
         </div>
       </div>
 
       <div className="container mx-auto px-4 py-12">
-        <div className="flex justify-center mb-10">
+        <div className="flex justify-center mb-10 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
           <LocationFilter
             selectedLG={selectedLG}
             selectedArea={selectedArea}
@@ -70,7 +70,7 @@ const Listings = () => {
           </div>
         ) : paginated.length > 0 ? (
           <>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               {paginated.map((a) => (
                 <ApartmentCard key={a.id} apartment={a} />
               ))}
