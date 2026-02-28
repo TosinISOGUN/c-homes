@@ -7,6 +7,7 @@ import { Shield, CheckCircle, Users, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
+import SEO from "@/components/SEO";
 
 const features = [
   { icon: Shield, title: "Verified Listings", desc: "Every apartment is checked for quality and safety before listing." },
@@ -22,6 +23,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background font-body">
+      <SEO title="Home | C-Homes" />
       <Navbar />
       <HeroSection />
 

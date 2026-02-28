@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MessageCircle } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -18,6 +19,7 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background font-body">
+      <SEO title="Contact Us | C-Homes" description="Get in touch with C-homes for any questions or support." />
       <Navbar />
       <div className="pt-24 pb-16">
         <div className="container mx-auto px-4 max-w-2xl">

@@ -7,6 +7,7 @@ import { useApartments } from "@/hooks/useApartments";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
+import SEO from "@/components/SEO";
 
 const ITEMS_PER_PAGE = 6;
 
@@ -32,6 +33,7 @@ const Listings = () => {
 
   return (
     <div className="min-h-screen bg-background font-body">
+      <SEO title="Listings | C-Homes" description="Browse all available apartments in Ibadan. Use the filters to narrow down by location." />
       <Navbar />
 
       {/* Page Header */}

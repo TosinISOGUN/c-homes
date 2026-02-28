@@ -6,6 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import SEO from "@/components/SEO";
 
 const faqs = [
   {
@@ -40,6 +41,7 @@ const faqs = [
 
 const FAQ = () => (
   <div className="min-h-screen bg-background font-body">
+    <SEO title="FAQ | C-Homes" description="Frequently asked questions about finding housing through C-homes." />
     <Navbar />
     <div className="pt-24 pb-16">
       <div className="container mx-auto px-4 max-w-2xl">

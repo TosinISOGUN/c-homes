@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Users, Target, Shield, Heart } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const values = [
   { icon: Target, title: "Our Mission", desc: "To provide every NYSC corps member serving in Oyo State with access to affordable, safe, and verified housing in Ibadan." },
@@ -11,6 +12,7 @@ const values = [
 
 const About = () => (
   <div className="min-h-screen bg-background font-body">
+    <SEO title="About Us | C-Homes" description="Learn about C-homes and our mission to provide affordable housing for NYSC corps members." />
     <Navbar />
     <div className="pt-24 pb-16">
       <div className="container mx-auto px-4 max-w-3xl">
