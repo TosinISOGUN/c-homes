@@ -2,10 +2,11 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import ApartmentCard from "@/components/ApartmentCard";
-import { apartments } from "@/data/apartments";
+import { useApartments } from "@/hooks/useApartments";
 import { Shield, CheckCircle, Users, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
 
 const features = [
   { icon: Shield, title: "Verified Listings", desc: "Every apartment is checked for quality and safety before listing." },
@@ -16,6 +17,7 @@ const features = [
 const PREVIEW_COUNT = 3;
 
 const Index = () => {
+  const { data: apartments = [], isLoading } = useApartments();
   const preview = apartments.slice(0, PREVIEW_COUNT);
 
   return (
@@ -75,9 +77,21 @@ const Index = () => {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {preview.map((a) => (
-            <ApartmentCard key={a.id} apartment={a} />
-          ))}
+          {isLoading ? (
+            Array.from({ length: 3 }).map((_, i) => (
+              <div key={i} className="flex flex-col space-y-3">
+                <Skeleton className="h-[224px] w-full rounded-xl" />
+                <div className="space-y-2">
+                  <Skeleton className="h-4 w-full" />
+                  <Skeleton className="h-4 w-2/3" />
+                </div>
+              </div>
+            ))
+          ) : (
+            preview.map((a) => (
+              <ApartmentCard key={a.id} apartment={a} />
+            ))
+          )}
         </div>
 
         <div className="text-center mt-12">

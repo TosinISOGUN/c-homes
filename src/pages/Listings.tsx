@@ -3,13 +3,15 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ApartmentCard from "@/components/ApartmentCard";
 import LocationFilter from "@/components/LocationFilter";
-import { apartments } from "@/data/apartments";
+import { useApartments } from "@/hooks/useApartments";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Skeleton } from "@/components/ui/skeleton";
 
 const ITEMS_PER_PAGE = 6;
 
 const Listings = () => {
+  const { data: apartments = [], isLoading } = useApartments();
   const [selectedLG, setSelectedLG] = useState("");
   const [selectedArea, setSelectedArea] = useState("");
   const [page, setPage] = useState(1);
@@ -20,7 +22,7 @@ const Listings = () => {
       if (selectedArea && selectedArea !== "all" && a.area !== selectedArea) return false;
       return true;
     });
-  }, [selectedLG, selectedArea]);
+  }, [selectedLG, selectedArea, apartments]);
 
   const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
   const paginated = filtered.slice((page - 1) * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE);
@@ -52,7 +54,19 @@ const Listings = () => {
           />
         </div>
 
-        {paginated.length > 0 ? (
+        {isLoading ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <div key={i} className="flex flex-col space-y-3">
+                <Skeleton className="h-[224px] w-full rounded-xl" />
+                <div className="space-y-2">
+                  <Skeleton className="h-4 w-full" />
+                  <Skeleton className="h-4 w-2/3" />
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : paginated.length > 0 ? (
           <>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {paginated.map((a) => (
