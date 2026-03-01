@@ -23,7 +23,25 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background font-body">
-      <SEO title="Home | C-Homes" />
+      <SEO
+        title="C-Homes | Affordable Housing for NYSC Corps Members in Ibadan"
+        description="Find affordable, verified apartments in Ibadan for NYSC corps members. Browse listings across all local governments in Oyo State."
+        path="/"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "C-Homes",
+          url: "https://c-homes.vercel.app",
+          description: "Affordable, verified housing for NYSC corps members serving in Ibadan, Oyo State.",
+          contactPoint: {
+            "@type": "ContactPoint",
+            telephone: "+234-816-437-6172",
+            contactType: "customer service",
+            areaServed: "NG",
+            availableLanguage: "English",
+          },
+        }}
+      />
       <Navbar />
       <HeroSection />
 

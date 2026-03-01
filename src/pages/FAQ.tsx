@@ -41,7 +41,23 @@ const faqs = [
 
 const FAQ = () => (
   <div className="min-h-screen bg-background font-body">
-    <SEO title="FAQ | C-Homes" description="Frequently asked questions about finding housing through C-homes." />
+    <SEO
+      title="Frequently Asked Questions | C-Homes"
+      description="Got questions about NYSC housing in Ibadan? Find answers about apartment verification, pricing, locations, and how C-Homes works."
+      path="/faq"
+      jsonLd={{
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.q,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.a,
+          },
+        })),
+      }}
+    />
     <Navbar />
     <div className="pt-24 pb-16">
       <div className="container mx-auto px-4 max-w-2xl">

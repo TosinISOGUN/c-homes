@@ -19,7 +19,11 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background font-body">
-      <SEO title="Contact Us | C-Homes" description="Get in touch with C-homes for any questions or support." />
+      <SEO
+        title="Contact Us | C-Homes - Get Help Finding NYSC Housing"
+        description="Have questions or need help finding an apartment in Ibadan? Contact C-Homes via WhatsApp or email for quick assistance."
+        path="/contact"
+      />
       <Navbar />
       <div className="pt-24 pb-16">
         <div className="container mx-auto px-4 max-w-2xl">

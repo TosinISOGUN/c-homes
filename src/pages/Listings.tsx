@@ -33,7 +33,11 @@ const Listings = () => {
 
   return (
     <div className="min-h-screen bg-background font-body">
-      <SEO title="Listings | C-Homes" description="Browse all available apartments in Ibadan. Use the filters to narrow down by location." />
+      <SEO
+        title="Apartment Listings in Ibadan | C-Homes"
+        description="Browse all available verified apartments in Ibadan for NYSC corps members. Filter by local government and area to find your perfect home."
+        path="/listings"
+      />
       <Navbar />
 
       {/* Page Header */}

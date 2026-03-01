@@ -12,7 +12,11 @@ const values = [
 
 const About = () => (
   <div className="min-h-screen bg-background font-body">
-    <SEO title="About Us | C-Homes" description="Learn about C-homes and our mission to provide affordable housing for NYSC corps members." />
+    <SEO
+      title="About Us | C-Homes - Affordable NYSC Housing in Ibadan"
+      description="Learn about C-Homes and our mission to provide affordable, verified housing for NYSC corps members serving in Ibadan, Oyo State."
+      path="/about"
+    />
     <Navbar />
     <div className="pt-24 pb-16">
       <div className="container mx-auto px-4 max-w-3xl">
