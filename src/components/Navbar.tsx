@@ -20,12 +20,12 @@ const Navbar = () => {
       {/* Top contact bar */}
       <div className="bg-primary text-primary-foreground text-xs py-2">
         <div className="container mx-auto px-4 flex items-center justify-center gap-6">
-          <a href="https://wa.me/2348164376172" className="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
-            <Phone className="h-3 w-3" /> +234 816 437 6172
+          <a href="https://wa.me/2349035370138" className="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
+            <Phone className="h-3 w-3" /> +234 903 537 0138
           </a>
           <span className="opacity-50">|</span>
-          <a href="mailto:isogun21@gmail.com" className="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
-            <Mail className="h-3 w-3" /> isogun21@gmail.com
+          <a href="mailto:ayodelejoshua38@gmail.com" className="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
+            <Mail className="h-3 w-3" /> ayodelejoshua38@gmail.com
           </a>
         </div>
       </div>

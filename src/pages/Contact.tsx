@@ -14,7 +14,7 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const text = `Hello C-homes! My name is ${name}. ${message}`;
-    window.open(`https://wa.me/2348164376172?text=${encodeURIComponent(text)}`, "_blank");
+    window.open(`https://wa.me/2349035370138?text=${encodeURIComponent(text)}`, "_blank");
   };
 
   return (
@@ -36,7 +36,7 @@ const Contact = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
             <a
-              href="https://wa.me/2348164376172"
+              href="https://wa.me/2349035370138"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-card rounded-lg p-5 shadow-card border flex items-center gap-4 hover-lift"
@@ -46,11 +46,11 @@ const Contact = () => {
               </div>
               <div>
                 <p className="font-semibold text-foreground text-sm">WhatsApp</p>
-                <p className="text-muted-foreground text-sm">+234 816 437 6172</p>
+                <p className="text-muted-foreground text-sm">+234 903 537 0138</p>
               </div>
             </a>
             <a
-              href="mailto:isogun21@gmail.com"
+              href="mailto:ayodelejoshua38@gmail.com"
               className="bg-card rounded-lg p-5 shadow-card border flex items-center gap-4 hover-lift"
             >
               <div className="w-10 h-10 rounded-lg gradient-primary flex items-center justify-center shrink-0">
@@ -58,7 +58,7 @@ const Contact = () => {
               </div>
               <div>
                 <p className="font-semibold text-foreground text-sm">Email</p>
-                <p className="text-muted-foreground text-sm">isogun21@gmail.com</p>
+                <p className="text-muted-foreground text-sm">ayodelejoshua38@gmail.com</p>
               </div>
             </a>
           </div>

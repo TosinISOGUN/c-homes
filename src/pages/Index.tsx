@@ -35,7 +35,7 @@ const Index = () => {
           description: "Affordable, verified housing for NYSC corps members serving in Ibadan, Oyo State.",
           contactPoint: {
             "@type": "ContactPoint",
-            telephone: "+234-816-437-6172",
+            telephone: "+234-903-537-0138",
             contactType: "customer service",
             areaServed: "NG",
             availableLanguage: "English",

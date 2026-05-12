@@ -24,11 +24,11 @@ const Footer = () => (
         <div>
           <h4 className="font-display text-lg font-semibold mb-4 tracking-wide uppercase">Contact</h4>
           <div className="flex flex-col gap-3">
-            <a href="https://wa.me/2348164376172" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors flex items-center gap-2">
-              <Phone className="h-4 w-4" /> +234 816 437 6172
+            <a href="https://wa.me/2349035370138" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors flex items-center gap-2">
+              <Phone className="h-4 w-4" /> +234 903 537 0138
             </a>
-            <a href="mailto:isogun21@gmail.com" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors flex items-center gap-2">
-              <Mail className="h-4 w-4" /> isogun21@gmail.com
+            <a href="mailto:ayodelejoshua38@gmail.com" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors flex items-center gap-2">
+              <Mail className="h-4 w-4" /> ayodelejoshua38@gmail.com
             </a>
           </div>
         </div>
