@@ -18,8 +18,8 @@ const Navbar = () => {
   return (
     <>
       {/* Top contact bar */}
-      <div className="bg-primary text-primary-foreground text-xs py-2">
-        <div className="container mx-auto px-4 flex items-center justify-center gap-6">
+      <div className="bg-primary text-primary-foreground text-[10px] sm:text-xs py-2">
+        <div className="container mx-auto px-2 sm:px-4 flex items-center justify-center gap-2 sm:gap-6">
           <a href="https://wa.me/2349035370138" className="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
             <Phone className="h-3 w-3" /> +234 903 537 0138
           </a>
